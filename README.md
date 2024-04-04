@@ -1,1 +1,0 @@
-# 借鉴vueHashRouter思想，手写Router实现简单静态页面的跳转
