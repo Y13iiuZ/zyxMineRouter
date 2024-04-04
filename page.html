@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ztxRouter</title>
+    </head>
+    <body>
+        <div class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"
+                    onclick="router.push({
+                        name: 'name'
+                    })">
+                    <a>姓名</a>
+                </li>
+                <li class="nav-item"
+                    onclick="router.push({
+                        name: 'occupation'
+                    })">
+                    <a>职业</a>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="main-box" data-component-name="name">
+                铁曦
+            </div>
+            <div class="main-box" data-component-name="occupation">
+                前端
+            </div>
+        </div>
+    </body>
+    <script src="./myRouter.js"></script>
+    <script>
+        window.router = new MyRouter({
+            routes: [{
+                path: '/name',
+                name: 'name'
+            }, {
+                path: '/occupation',
+                name: 'occupation'
+            }]
+        })
+    </script>
+    <style>
+        [data-component-name] {
+            display: none;
+            color: skyblue;
+        }
+        ul li {
+            cursor: pointer;
+            color: #f90;
+        }
+    </style>
+</html>
